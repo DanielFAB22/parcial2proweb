@@ -1,0 +1,32 @@
+ASIGNATURA:
+INSERT INTO asignatura (descripcion, docente_encargado, horario, nombre, salon)
+VALUES ('Ecuaciones y derivadas', 'Pacheco Vallejo', 'De 4pm a 6pm', 'Matematicas aplicadas', '304'),
+('Fisica avanzada', 'Pacheco Vallejo', 'De 2pm a 3pm', 'Fisica Cuantica', '305'),
+('Ingles americano', 'Paola Piedrahita', 'De 1pm a 2pm', 'Ingles', '212'),
+('Verbos complejos', 'Juan Ignacio', 'De 6am a 8am', 'Español', '101');
+USUARIOS:
+usuarioRepo.save(Usuario.builder()
+                .username("Pacheco Vallejo")
+                .password(encoder.encode("123"))
+                .roles(Set.of(docente))
+                .build());
+        usuarioRepo.save(Usuario.builder()
+                .username("Paola Piedrahita")
+                .password(encoder.encode("123"))
+                .roles(Set.of(docente))
+                .build());
+        usuarioRepo.save(Usuario.builder()
+                .username("Juan Ignacio")
+                .password(encoder.encode("123"))
+                .roles(Set.of(docente))
+                .build());
+        usuarioRepo.save(Usuario.builder()
+                .username("Nicolo Barella")
+                .password(encoder.encode("123"))
+                .roles(Set.of(rector))
+                .build());
+        usuarioRepo.save(Usuario.builder()
+                .username("Lautaro Martinez")
+                .password(encoder.encode("123"))
+                .roles(Set.of(estudiante))
+                .build());
